@@ -44,9 +44,12 @@ section {
   border-radius:20px;
 }
 
-.tamil {
+.tamil-title {
   font-family: 'Noto Sans Tamil';
-  margin-top:20px;
+  font-size: 20px;
+  margin-top: 10px;
+  color: #e8c27a;
+  letter-spacing: 1px;
 }
 
 .gallery img {
