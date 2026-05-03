@@ -1,107 +1,114 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: 'Playfair Display', serif;
-  color: #f5e6c8;
-
-  background: linear-gradient(-45deg, #2b0a0a, #5a1a1a, #3d1212, #1a0505);
-  background-size: 400% 400%;
-  animation: gradientMove 12s ease infinite;
+  background: linear-gradient(135deg, #eaf3ff, #d6e6ff);
+  color: #1a1a1a;
+  overflow-x: hidden;
 }
 
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
+/* CENTER EVERYTHING */
 section {
-  padding: 80px 20px;
-}
-
-.hero {
-  min-height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  text-align: center;
 }
 
+/* INTRO */
 .intro {
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  background:#2b0a0a;
-  cursor:pointer;
+  height: 100vh;
+  background: linear-gradient(135deg, #dce9ff, #c7dcff);
+  cursor: pointer;
 }
 
-.vinayagar {
-  width:120px;
-  margin-bottom:20px;
+.intro img {
+  width: 120px;
+  margin-bottom: 20px;
 }
 
-.hidden {
-  display:none;
-}
-
+/* HERO */
 .hero {
-  background: linear-gradient(#2b0a0a, #5a1a1a);
+  min-height: 100vh;
 }
 
-.details, .message, .gallery, .venue, .closing {
-  background:#3d1212;
-  margin-top:10px;
-  border-radius:20px;
+.hero h1 {
+  font-size: 32px;
 }
 
-.tamil-title {
-  font-family: 'Noto Sans Tamil';
-  font-size: 20px;
+.hero p {
   margin-top: 10px;
-  color: #e8c27a;
-  letter-spacing: 1px;
+}
+
+.tamil {
+  font-family: 'Noto Sans Tamil';
+  margin-top: 10px;
+  color: #555;
+}
+
+/* CARDS */
+.card {
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  margin: 20px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* GALLERY */
+.gallery {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .gallery img {
-  width:45%;
-  margin:10px;
-  border-radius:15px;
+  width: 45%;
+  border-radius: 15px;
 }
 
+/* MAP */
 iframe {
-  width:100%;
-  height:300px;
-  border:0;
-  margin-top:20px;
+  width: 100%;
+  height: 250px;
+  border: 0;
+  border-radius: 15px;
+  margin-top: 10px;
 }
 
+/* PARTICLES */
 .particles {
   position: fixed;
   width: 100%;
   height: 100%;
-  overflow: hidden;
   z-index: -1;
 }
 
 .particles span {
   position: absolute;
-  display: block;
-  width: 8px;
-  height: 8px;
-  background: rgba(255, 215, 150, 0.4);
+  width: 6px;
+  height: 6px;
+  background: rgba(0, 102, 255, 0.3);
   border-radius: 50%;
   animation: float 10s linear infinite;
 }
 
 @keyframes float {
-  0% {
-    transform: translateY(100vh) scale(0.5);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-10vh) scale(1);
-    opacity: 0;
-  }
+  0% { transform: translateY(100vh); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-10vh); opacity: 0; }
+}
+
+.hidden {
+  display: none;
 }
