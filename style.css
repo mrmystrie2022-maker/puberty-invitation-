@@ -6,26 +6,32 @@
 
 body {
   font-family: 'Playfair Display', serif;
-  background: linear-gradient(135deg, #eaf3ff, #d6e6ff);
-  color: #1a1a1a;
+  background: linear-gradient(135deg, #eef5ff, #dce9ff);
+  color: #222;
   overflow-x: hidden;
 }
 
-/* CENTER EVERYTHING */
+/* MAIN CENTER WRAPPER */
+#main {
+  max-width: 420px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ALL SECTIONS */
 section {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 60px 20px;
   text-align: center;
+  margin: 40px 0;
 }
 
 /* INTRO */
 .intro {
   height: 100vh;
-  background: linear-gradient(135deg, #dce9ff, #c7dcff);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #dbe8ff, #cfe0ff);
   cursor: pointer;
 }
 
@@ -35,54 +41,53 @@ section {
 }
 
 /* HERO */
-.hero {
-  min-height: 100vh;
+.hero h1 {
+  font-size: 30px;
+  font-weight: 600;
 }
 
-.hero h1 {
-  font-size: 32px;
+.hero h2 {
+  font-size: 18px;
+  color: #555;
 }
 
 .hero p {
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .tamil {
   font-family: 'Noto Sans Tamil';
   margin-top: 10px;
-  color: #555;
+  color: #444;
+  font-size: 16px;
 }
 
-/* CARDS */
+/* CARD STYLE */
 .card {
-  background: rgba(255,255,255,0.6);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  margin: 20px;
-  width: 90%;
-  max-width: 400px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  background: rgba(255,255,255,0.7);
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
 }
 
 /* GALLERY */
 .gallery {
   display: flex;
   gap: 10px;
-  flex-wrap: wrap;
   justify-content: center;
 }
 
 .gallery img {
-  width: 45%;
-  border-radius: 15px;
+  width: 48%;
+  border-radius: 12px;
 }
 
 /* MAP */
 iframe {
   width: 100%;
-  height: 250px;
-  border: 0;
-  border-radius: 15px;
+  height: 220px;
+  border-radius: 12px;
+  border: none;
   margin-top: 10px;
 }
 
@@ -96,11 +101,11 @@ iframe {
 
 .particles span {
   position: absolute;
-  width: 6px;
-  height: 6px;
-  background: rgba(0, 102, 255, 0.3);
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 200, 120, 0.5);
   border-radius: 50%;
-  animation: float 10s linear infinite;
+  animation: float 12s linear infinite;
 }
 
 @keyframes float {
