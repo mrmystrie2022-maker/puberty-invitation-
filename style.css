@@ -1,8 +1,17 @@
 body {
   margin: 0;
   font-family: 'Playfair Display', serif;
-  background: #2b0a0a;
   color: #f5e6c8;
+
+  background: linear-gradient(-45deg, #2b0a0a, #5a1a1a, #3d1212, #1a0505);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 section {
@@ -63,4 +72,36 @@ iframe {
   height:300px;
   border:0;
   margin-top:20px;
+}
+
+.particles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.particles span {
+  position: absolute;
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 215, 150, 0.4);
+  border-radius: 50%;
+  animation: float 10s linear infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+    opacity: 0;
+  }
 }
